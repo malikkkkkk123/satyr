@@ -43,5 +43,9 @@ async def roll(ctx, dice: str):
     result = ', '.join(str(random.randint(1, limit)) for r in range(rolls))
     await ctx.send(result)
 
+@bot.command(description='For when you wanna settle the score some other way')
+async def choose(ctx, *choices: str):
+    """Chooses between multiple choices."""
+    await ctx.send(random.choice(choices))
 
-bot.run('MTIxMzY1ODAwNzQyNzM1MDU1OA.GdlrCY.XJBp2FX2MyqOveD2lJMAfAalz-wD_XfMkh5ZAM')
+bot.run('kosongin karna dimarahin discord')
